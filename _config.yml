@@ -35,7 +35,8 @@ header_pages:
 remote_theme: jekyll/minima
 plugins:
   - jekyll-feed
-  
+  - jemoji  
+
 minima:
   skin: dark
   social_links: 
