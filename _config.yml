@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Running in circles
+title: Flesh shapes the day
 author:
   name: Martin Rublik
   email: "martin.rublik@gmail.com"

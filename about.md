@@ -33,10 +33,11 @@ I have:
 - Master thesis regarding electronic signatures from technical and law perspective.
 
 ### Publications, presentations and tools
-- [:octocat: github publications repository](https://github.com/martin-rublik/publications)
+- [github publications and presentations repository](https://github.com/martin-rublik/publications)
 - [powershell profile](https://github.com/martin-rublik/psprofile)
 - [EntraID-TokenTools](https://www.powershellgallery.com/packages/EntraID-TokenTools/1.0.4)
 - [Get-SAMLMetadata](https://www.powershellgallery.com/packages/FedMetadata/1.0.2/Content/Get-SAMLMetadata.ps1)
+- [Error Lookup Tool Wrapper](https://winerr.azurewebsites.net/)
 
 ### Certifications
 CISSP License ID: 384919
