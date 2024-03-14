@@ -23,12 +23,12 @@ author:
   name: Martin Rublik
   email: "martin.rublik@gmail.com"
 description: >- # this means to ignore newlines until "baseurl:"
-    A blog on Office 365, Entra ID, Active Directory, identity and access management, PKI, powershell, one-liners and other technical stuff I like.
+  A blog on Office 365, Entra ID, Active Directory, identity and access management, PKI, powershell, one-liners and other technical stuff I like.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://martin.rublik.eu" # the base hostname & protocol for your site, e.g. http://example.com
 
 header_pages:
- - about.md
+  - about.md
 
 
 # Build settings
@@ -37,8 +37,8 @@ plugins:
   - jekyll-feed
   
 minima:
-   skin: dark
-   social_links: 
+  skin: dark
+  social_links: 
     - { platform: linkedin,  user_url: "https://www.linkedin.com/in/mrublik/" }
     - { platform: github,  user_url: "https://github.com/martin-rublik/" }
     - { platform: keybase,  user_url: "https://keybase.io/martin_rublik" }
