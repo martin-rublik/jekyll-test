@@ -7,6 +7,7 @@ layout: base
 {% include printtags.html %}
 {% endif %}  
 
+
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta">
@@ -20,7 +21,7 @@ layout: base
         <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
           {{ mdate | date: date_format }}
         </time>
-      {%- endif -%}
+      {%- endif -%} | {% include read-time.html content = page.content %} 
       {%- if page.author -%}
         • {% for author in page.author %}
           <span itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -30,7 +31,7 @@ layout: base
       {%- endif -%}</p>
   </header>
 
-  <div class="post-content e-content" itemprop="articleBody">
+  <div class="post-content e-content" itemprop="articleBody" style="text-align: justify;">
     {{ content }}
   </div>
 
@@ -39,4 +40,5 @@ layout: base
   {%- endif -%}
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+  <script src="/assets/scripts/copyCode.js"></script>
 </article>

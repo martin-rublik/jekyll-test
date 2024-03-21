@@ -6,7 +6,7 @@ permalink: /about/
 
 ## Martin Rublík
 Technical IT guy, specialties: 
-- :heart: powershell, bash
+- :blue_heart: powershell, bash
 - Identity and Access Management 
 - Active Directory 
 - Microsoft 365 and Entra ID 
@@ -18,8 +18,8 @@ Technical IT guy, specialties:
 I have: 
 - implemented multiple public key infrastructures with 20K+ subscribers/end entities, 
 - participated on large (10.000+ users) and smaller M365 tenant-to-tenant migrations (responsible especially for identity and access management and identity transfer), 
-- designed identity synchronization infrastructures and authentication infrastructures in large companies, 
-- performed on-prem to cloud migrations / cutover migrations.
+- designed identity synchronization infrastructures and authentication infrastructures in large companies (50K+ users), 
+- performed on-prem to cloud migrations / cutover migrations for small companies (approx. 100 users).
 
 ### Education
 [Faculty of Economic Informatics, Economic University, Bratislava](https://www.euba.sk)
