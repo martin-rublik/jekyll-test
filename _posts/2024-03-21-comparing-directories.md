@@ -19,11 +19,9 @@ Here is the one-liner :smiling_imp: I prepared to get the information. The steps
 ls . -Recurse | ?{$_.Extension -in ".dll",".exe"} | foreach {Get-FileHash $_.fullname | select *,@{n='RelativePath';e={$_.Path.Replace("$($pwd)","")}} -ExcludeProperty Path | sort -property RelativePath} | convertto-json | set-clipboard
 ```
 
-I decided to use the second approach, because version information is not so
-reliable and in some cases might not be updated. On the other hand, the hash is
-changing each time a file changes.
-
-So I started building a one-liner which could be used for comparison.
+I decided to use the second approach. Version information is not so reliable and
+in some cases might not be updated. On the other hand, the hash is changing each
+time a file changes. So I started building a one-liner which could be used for comparison.
 
 First, I needed to list all files within a directory. Simple:
 ```powershell
@@ -37,31 +35,31 @@ again simple:
 ls . -Recurse -Include *.dll
 ```
 
-Unfortunately, it was problematic for me to include ```*.exe``` as well.
+Unfortunately, it was problematic to include ```*.exe``` as well.
 According to [superuser: How do I get get-childitem to filter on multiple file
-types?](https://superuser.com/questions/318197/how-do-i-get-get-childitem-to-filter-on-multiple-file-types)
-I found that getting all files and directories and then filtering them might be
-even faster, thus I used this approach.
+types?](https://superuser.com/questions/318197/how-do-i-get-get-childitem-to-filter-on-multiple-file-types),
+I found that filtering files might simpler and faster after enumeration, thus I used this approach.
 ```powershell
 ls . -Recurse | ?{$_.Extension -in ".dll",".exe"} 
 ```
 
-So, now we have all DLL and EXE files, we'll pipe them to the ```Get-FileHash```, easy.
+So, now we had all DLL and EXE files. I've piped them to the ```Get-FileHash```, easy.
 ```powershell
 ls . -Recurse | ?{$_.Extension -in ".dll",".exe"} | foreach {Get-FileHash $_.fullname}
 ```
 
-We could just, pipe the output to the clipboard or to a file and we're done.
-Afterwards we can use our favorite text editor and compare the hashes between the environments.
+We could just, pipe the output to the clipboard or to a file and we'd be done.
+Afterwards we could use our favorite text editor and compare the hashes between the environments.
 
-Sadly, in my case the files were not in the same path, thus it was not so easy.
-Still, the directory structure should be the same. So I decided to get a
+Sadly, in my case the files were not in the same path (in different environments), thus it was not so easy.
+Still, the directory structure was the same. So I decided to get a
 relative path instead of full path. To achieve that I used:
 ```powershell
 select *,@{n='RelativePath';e={$_.Path.Replace("$($pwd)","")}} -ExcludeProperty Path | sort -property RelativePath}
 ```
 
-And after that I've converted output to JSON which can be easily compared. You
-can check the output here (bogus, but you'll get the message).
+And after that I've converted output to JSON which could be easily compared. 
+
+You can check the output here (bogus, but you'll get the message).
 
 ![](/assets/pictures/fs-cmp/fs-cmp-winmerge.jpg)
