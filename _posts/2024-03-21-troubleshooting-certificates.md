@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "troubleshooting TLS and certificates"
-date: 2024-03-15 08:00:00 +0100
+date: 2024-03-21 08:00:00 +0100
 image: ts-tls/ts-tls-logo.jpg
 tags: tls x509 one-liner
 ---
